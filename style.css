@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    overflow: hidden;
+}
+
+.container{
+    background-color: #ff9a03;
+}
+
+.logo{
+    margin-top: 8px;
+}
+
+nav, ul, li{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+li, a{
+    font-size: 25px;
+    color: #000;
+    font-weight: 900;
+}
+
+
+.container header{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.texto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 40px;
+}
+
+
+.texto .pizza{
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+    box-shadow: -1px 6px 15px 12px rgba(0, 0, 0, 0.7);
+}
+
+
+.cont-texto{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    height: 500px;
+}
+
+
+.cont-texto h1{
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 90px;
+    color: #555;
+}
+
+.cont-texto h2{
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #fb0404;
+    font-weight: 700;
+}
+
+.cont-texto p{
+    max-width: 500px;
+    font-size: 18px;
+}
+
+.cont-texto button{
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    padding: 8px;
+    transition: all 0.6s ease-in-out;
+}
+
+.cont-texto button:hover{
+    background: #555;
+}
+
+.cont-texto button a:hover{
+    transition:all 0.6s ease-in;
+    color: #fff;
+}
