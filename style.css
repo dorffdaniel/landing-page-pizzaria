@@ -8,7 +8,12 @@
 }
 
 .container{
+    background: linear-gradient(-230deg, #000 20%, rgba(0,0,0,0) 65% ) no-repeat;
     background-color: #ff9a03;
+}
+
+.cabecalho{
+    flex-wrap: wrap;
 }
 
 .logo{
@@ -19,14 +24,21 @@ nav, ul, li{
     display: flex;
     align-items: center;
     gap: 50px;
+    margin-left: 5px;
 }
 
-li, a{
-    font-size: 25px;
+.cabecalho nav, ul, li, a{
+    font-size: calc(1rem + 1vw);
     color: #000;
     font-weight: 900;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 3px;
+    transition: all ease 0.5s;
 }
 
+nav ul li a:hover{
+    border-bottom: 2px solid red;
+}
 
 .container header{
     display: flex;
@@ -56,19 +68,19 @@ li, a{
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    height: 500px;
+    
 }
 
 
 .cont-texto h1{
     display: flex;
     margin-bottom: 10px;
-    font-size: 90px;
+    font-size: calc(2em + 1vw);
     color: #555;
 }
 
 .cont-texto h2{
-    font-size: 28px;
+    font-size: calc(1.5em + 1vw);
     margin-bottom: 30px;
     color: #fb0404;
     font-weight: 700;
@@ -76,7 +88,7 @@ li, a{
 
 .cont-texto p{
     max-width: 500px;
-    font-size: 18px;
+    font-size: 2rem;
 }
 
 .cont-texto button{
@@ -87,11 +99,56 @@ li, a{
     transition: all 0.6s ease-in-out;
 }
 
+.btn{
+    font-size: 2rem;
+}
+
 .cont-texto button:hover{
     background: #555;
 }
 
-.cont-texto button a:hover{
+.cont-texto button .btn:hover{
     transition:all 0.6s ease-in;
     color: #fff;
+}
+
+@media (min-width: 300px) and (max-width: 480px){
+    *{
+        overflow: auto;
+    }
+   
+    ul{
+        gap: 10px;
+    }
+   
+    li, a{
+        color: #fff;
+    }
+    
+    .texto{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .setas{
+        display: none;
+    }
+
+    .texto .pizza{
+        width: 17rem;
+        height: 15rem;
+        object-fit: cover;
+        margin-top: 1rem;
+    }
+
+    .cont-texto p{
+        font-size: calc(1em + 1vw);
+        max-width: 320px;
+    }
+
+    .btn{
+        color: #555;
+        font-size: 1rem;
+    }
+
 }
